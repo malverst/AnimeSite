@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1b1118;
+}
+
+
+header {
+    display: grid;
+    grid-template-columns: 1.5fr .75fr .3fr .5fr .1fr 1.7fr 2fr;
+    padding-top: 30px;
+    font-weight: bold; 
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    color: #E9E9E9;
+    height: 60px;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    box-shadow: inset;
+}
+.el2 { 
+    padding-left: 20%;
+}
+.el1 { 
+    padding-right: 20%;
+}
+.loupe {
+    width: 40px;
+    height: 40px;
+}
+
+.search-container {
+    position: relative;
+    width: 300px;
+}
+
+.search {
+  padding: 12px;
+  background-color: #31222f;
+  border-radius: 10px; 
+  width: 400px; 
+  height: 10px;
+  border-bottom: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border: 3px solid #2b1e29;
+  transition: all .5s;
+}
+
+.search::placeholder {
+    color: #CBCBCB;
+}
+
+.search:hover {
+    background-color: #424242;
+
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: -115px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.search-icon:hover {
+    border: 2px solid #444444;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #444444;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.logo:hover {
+    color: grey;
+    transition: color 0.5s;
+    cursor: pointer;
+}
+
+.configure-btn {
+    text-decoration: none;
+    color: white
+}
+
+.configure-btn:hover {
+    color: grey;
+    transition: color 0.5s
+}
+
+.avatar:hover {
+    opacity: 50%;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+
+.card {
+    display: grid;
+    grid-template-columns: .5fr .3fr .8fr .5fr;
+    grid-column-gap: 10px;
+    color: white;
+}
+
+.banner {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.banner-img {
+    height: 360px;
+    width: 260px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+
+.content {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #31222f;
+    padding: 10px
+}
+
+.cElement {
+    background-color: rgb(43, 30, 42);
+    color: white;
+    border-radius: 10px;
+    width: auto;
+    height: 50px;
+    margin: 20px 0;
+}
+
+.genres {
+    display: flex;
+}
+
+.genre {
+    height: 20px;
+    width: 100px;
+    margin-left: 20px;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    align-self: center;
+}
+
+.eps {
+    height: auto;
+    padding: 5px 0;
+}
+
+.eps p{
+    padding: 5px;
+    display: flex;
+}
+
+.description {
+    height: auto;
+    padding: 10px;
+}
+
+.op {
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+.name {
+    height: auto;
+    padding: 5px 0;
+}
+
+.churka-name {
+    height: auto;
+    padding: 5px 0;
+}
+
+.name p {
+    padding: 5px;
+}
+
+.churka-name p {
+    padding: 5px;
+}

@@ -8,18 +8,14 @@
 </head>
 <body>
     <!-- ШАПКА -->
-    <header>
-        <div class="div"></div>
+    <header class="no-select">
         <div class="el2 logo ass anims">Логотип</div>
-        <div class="div"></div>
         <div class=""><a href="configure.html" class="configure-btn anims">Аниме</a></div>
-        <div class="div"></div>
         <div class="search-container">
-            <input type="text" class="search" placeholder="Поиск">
+            <input type="text" class="search" placeholder="">
             <img src="../static/images/loupe.png" alt="Search" class="search-icon" style="opacity: 60%;">
         </div>
-        <div class="el1" style="padding-left: 7.5%;"><img src="../static/images/avatar.png" style="width: 40px; height: 40px;" class="avatar anims"></div>
-        <div class="div"></div>
+        <div class="el1"><img src="../static/images/avatar.png" style="width: 40px; height: 40px;" class="avatar anims"></div>
     </header>
 
     <!-- ОСНОВНОЙ КОНТЕНТ -->
@@ -117,7 +113,7 @@
             const animeList = document.getElementById('anime-list');
             animeData.forEach(anime => {
                 const newAnimeCard = document.createElement('div');
-                newAnimeCard.classList.add('card', 'show', 'anims');
+                newAnimeCard.classList.add('card', 'show', 'anims', 'no-select');
                 newAnimeCard.innerHTML = `
                     <div class="picture">
                         <img src="${anime['Image src']}" class="img-banner">

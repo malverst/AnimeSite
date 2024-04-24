@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>adadada</title>
+    <meta name="keywords" content="Название - смотреть аниме онлайн, лучшие тайтлы на одном сайте, описание, смотреть аниме.">
+    <meta name="description" content="Лучший источник для любителей аниме. Мы предлагаем широкий выбор аниме-сериалов и фильмов, обновления ассортимента аниме, обзоры аниме, новые тайтлы, актуальная информация о всех новостях.">
+    <title>ElephantCock</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}">
 </head>
 <body>
     <!-- ШАПКА -->
     <header class="no-select">
-        <div class="el2 logo ass anims">Логотип</div>
+        <div class="el2 logo ass anims">ElephantCock</div>
         <div class=""><a href="configure.html" class="configure-btn anims">Аниме</a></div>
         <div class="search-container">
-            <input type="text" class="search" placeholder="">
-            <img src="../static/images/loupe.png" alt="Search" class="search-icon" style="opacity: 60%;">
+            <input type="text" class="search" placeholder="" id="searchInput">
+            <img src="../static/images/loupe.png" alt="Search" class="search-icon" style="opacity: 60%;" onclick="searchAnime()">
         </div>
         <div class="el1"><img src="../static/images/avatar.png" style="width: 40px; height: 40px;" class="avatar anims"></div>
     </header>
@@ -28,43 +30,54 @@
         <div class="item">
             <div class="block"><div class="block-text">Фильтр</div></div>
             <div class="filter">
+
                 <div class="genre">
                     <div class="genre-btn" id="genre-btn"><div class="genre-svg"><img src="..\static\images/down.png" id="gsp"></div><div class="genre-name">Жанры</div></div>
                     <div class="dropdown hide no-select" id="drop">
-                        <div class="opt anims" id="opt">Романтика</div>
-                        <div class="opt anims" id="opt">Комедия</div>
-                        <div class="opt anims" id="opt">Хоррор</div>
-                        <div class="opt anims" id="opt">Триллер</div>
-                        <div class="opt anims" id="opt">Сёнен</div>
-                        <div class="opt anims" id="opt">Сейнен</div>
-                        <div class="opt anims" id="opt">Сёдзе</div>
-                        <div class="opt anims" id="opt">Спорт</div>
-                    </div>
-                </div>
-                <div class="genre">
-                    <div class="genre-btn" id="genre-btn"><div class="genre-svg"><img src="..\static\images/down.png" id="gsp"></div><div class="genre-name">Жанры</div></div>
-                    <div class="dropdown hide no-select" id="drop">
-                        <div class="opt anims" id="opt">Романтика</div>
-                        <div class="opt anims" id="opt">Комедия</div>
-                        <div class="opt anims" id="opt">Хоррор</div>
-                        <div class="opt anims" id="opt">Триллер</div>
-                        <div class="opt anims" id="opt">Сёнен</div>
-                        <div class="opt anims" id="opt">Сейнен</div>
-                        <div class="opt anims" id="opt">Сёдзе</div>
-                        <div class="opt anims" id="opt">Спорт</div>
-                    </div>
-                </div>
-                <div class="genre">
-                    <div class="genre-btn" id="genre-btn"><div class="genre-svg"><img src="..\static\images/down.png" id="gsp"></div><div class="genre-name">Жанры</div></div>
-                    <div class="dropdown hide no-select" id="drop">
-                        <div class="opt anims" id="opt">Романтика</div>
-                        <div class="opt anims" id="opt">Комедия</div>
-                        <div class="opt anims" id="opt">Хоррор</div>
-                        <div class="opt anims" id="opt">Триллер</div>
-                        <div class="opt anims" id="opt">Сёнен</div>
-                        <div class="opt anims" id="opt">Сейнен</div>
-                        <div class="opt anims" id="opt">Сёдзе</div>
-                        <div class="opt anims" id="opt">Спорт</div>
+                        <div class="opt anims" id="opt">романтика</div>
+                        <div class="opt anims" id="opt">полиция</div>
+                        <div class="opt anims" id="opt">артхаус</div>
+                        <div class="opt anims" id="opt">киберпанк</div>
+                        <div class="opt anims" id="opt">ужасы</div>
+                        <div class="opt anims" id="opt">космические путешествия</div>
+                        <div class="opt anims" id="opt">для детей</div>
+                        <div class="opt anims" id="opt">детектив</div>
+                        <div class="opt anims" id="opt">исекай</div>
+                        <div class="opt anims" id="opt">комедия</div>
+                        <div class="opt anims" id="opt">экшн</div>
+                        <div class="opt anims" id="opt">музыкальный</div>
+                        <div class="opt anims" id="opt">семейный</div>
+                        <div class="opt anims" id="opt">гарем</div>
+                        <div class="opt anims" id="opt">пародия</div>
+                        <div class="opt anims" id="opt">вампиры</div>
+                        <div class="opt anims" id="opt">научная фантастика</div>
+                        <div class="opt anims" id="opt">кемонобито</div>
+                        <div class="opt anims" id="opt">трагедия</div>
+                        <div class="opt anims" id="opt">паропанк</div>
+                        <div class="opt anims" id="opt">драма</div>
+                        <div class="opt anims" id="opt">мистика</div>
+                        <div class="opt anims" id="opt">меха</div>
+                        <div class="opt anims" id="opt">война</div>
+                        <div class="opt anims" id="opt">сказка</div>
+                        <div class="opt anims" id="opt">психология</div>
+                        <div class="opt anims" id="opt">антропоморфизм</div>
+                        <div class="opt anims" id="opt">этти</div>
+                        <div class="opt anims" id="opt">боевые искусства</div>
+                        <div class="opt anims" id="opt">романтика</div>
+                        <div class="opt anims" id="opt">сёнэн</div>
+                        <div class="opt anims" id="opt">школа</div>
+                        <div class="opt anims" id="opt">повседневность</div>
+                        <div class="opt anims" id="opt">фэнтези</div>
+                        <div class="opt anims" id="opt">постапокалиптика</div>
+                        <div class="opt anims" id="opt">спорт</div>
+                        <div class="opt anims" id="opt">триллер</div>
+                        <div class="opt anims" id="opt">сёдзё</div>
+                        <div class="opt anims" id="opt">исторический</div>
+                        <div class="opt anims" id="opt">дзёсэй</div>
+                        <div class="opt anims" id="opt">сэйнэн</div>
+                        <div class="opt anims" id="opt">приключения</div>
+                        <div class="opt anims" id="opt">самурайский боевик</div>
+                        <div class="opt anims" id="opt">махо-сёдзё</div>
                     </div>
                 </div>
             </div>
@@ -75,67 +88,48 @@
             <div class="list" id="anime-list">
                 <!-- Список аниме будет загружаться с помощью JavaScript -->
             </div>
+            <!-- Добавляем кнопки для пагинации -->
+            <div class="pagination">
+                <button id="prev-page">Назад</button>
+                <span id="page-number">1</span>
+                <button id="next-page">Вперед</button>
+            </div>
         </div>
         <div class="item"></div>
     </div>
     
-    <script>
-        let page = 0; // Счетчик страниц
-        const perPage = 10;
+    <!-- FOOTER -->
+    <footer>
+        <div class="grid-container">
+            <div class="a"></div>
+            <div class="info">
+                <div class="info_name">Информация о нашем сайте</div>
+                <div class="info_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, illo? Est numquam optio placeat officia aspernatur debitis qui animi voluptas, earum quisquam, nesciunt harum neque nobis consequuntur asperiores, soluta laborum!</div>
+            </div>
+            <div class="a"></div>
+            <div class="navigation">
+                <div class="navigation_name">Меню</div>
+                <a class="navigation_button anims">Главная страница</a>
+                <a class="navigation_button anims">Аниме</a>
+            </div>
+            <div class="a"></div>
+            <div class="donate">
+                <div class="donate_name">Можете поддержать нас сдесь</div>
+                <a class="donate_button anims"><img src=""></a>
+                <a class="donate_button anims"><img src=""></a>
+                <a class="donate_button anims"><img src=""></a>
+            </div>
+            <div class="a"></div>
+            <div class="contact">
+                <a class="contact_button anims"><img src="img/a.jpeg"></a>
+                <a class="contact_button anims"><img src="img/a.jpeg"></a>
+                <a class="contact_button anims"><img src="img/a.jpeg"></a>
+            </div>
+            <div class="a"></div>
+        </div>
+    </footer>
 
-        // Подгрузка новых карточек при скролле
-        window.addEventListener('scroll', () => {
-            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-                loadMoreAnime();
-            }
-        });
-
-        // Загрузка новых карточек
-        function loadMoreAnime() {
-            const xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        const data = JSON.parse(xhr.responseText);
-                        appendAnimeToPage(data.anime_data);
-                        page++;
-                    } else {
-                        console.error('Error loading anime data:', xhr.status);
-                    }
-                }
-            };
-            xhr.open('GET', `/load_more_anime?page=${page}&per_page=${perPage}`, true);
-            xhr.send();
-        }
-
-        // Добавление на сайт новых карточек
-        function appendAnimeToPage(animeData) {
-            const animeList = document.getElementById('anime-list');
-            animeData.forEach(anime => {
-                const newAnimeCard = document.createElement('div');
-                newAnimeCard.classList.add('card', 'show', 'anims', 'no-select');
-                newAnimeCard.innerHTML = `
-                    <div class="picture">
-                        <img src="${anime['Image src']}" class="img-banner">
-                    </div>
-                    <div class="content">
-                        <div class="names">
-                            <div class="shortName">${anime['Short title']}</div>
-                            <div class="name">${anime['Title']}</div>
-                        </div>
-                        <div class="episodes">${anime['Count episodes']} серий</div>
-                        <div class="description">${anime['Description']}</div>
-                        <!-- Другие данные о аниме -->
-                    </div>
-                `;
-                animeList.appendChild(newAnimeCard);
-            });
-        }
-
-        // Загрузка первой порции данных при загрузке страницы
-        window.onload = loadMoreAnime;
-    </script>
-
+    <script src="{{ url_for('static', filename='pages.js') }}"></script>
     <script src="{{ url_for('static', filename='main.js') }}"></script>
 
 </body>
